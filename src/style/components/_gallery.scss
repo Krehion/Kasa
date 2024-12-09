@@ -1,0 +1,22 @@
+@import "../base/_variables.scss";
+
+.gallery {
+	display: flex;
+	width: 95%;
+	max-width: 1240px;
+	margin: 25px auto 0 auto;
+	padding: 50px 0;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 50px;
+	background-color: $grey-medium;
+	border-radius: $radius-big;
+
+	@media only screen and (max-width: $bp-tablet) {
+		width: 95%;
+		gap: 22px;
+		padding: 0;
+		background-color: transparent;
+	}
+}

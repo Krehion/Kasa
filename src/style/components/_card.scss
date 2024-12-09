@@ -1,0 +1,60 @@
+@import "../base/_variables.scss";
+
+.card {
+	position: relative;
+	display: flex;
+	align-items: flex-end;
+	width: 340px;
+	height: 340px;
+	background-color: $color-primary;
+	border-radius: $radius-medium;
+	overflow: hidden;
+
+	@media only screen and (max-width: $bp-tablet) {
+		width: 100%;
+		height: 255px;
+	}
+
+	&__title {
+		position: relative;
+		margin: 15px;
+		color: white;
+		font-size: 18px;
+		font-weight: $font-weight-bold;
+		z-index: 3;
+	}
+
+	&__overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(
+			180deg,
+			rgba(255, 255, 255, 0) 0%,
+			rgba(10, 10, 10, 0) 42%,
+			rgba(4, 4, 4, 0.205) 99.99%,
+			rgba(0, 0, 0, 0.5) 100%
+		);
+		opacity: 60%;
+		z-index: 2;
+	}
+
+	&__bkgd {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		z-index: 1;
+	}
+
+	&__link {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 10;
+	}
+}
