@@ -5,8 +5,8 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	max-width: 95%;
-	width: 100%;
+	max-width: 1240px;
+	width: 95%;
 	height: 223px;
 	margin: 25px auto 0 auto;
 	background-color: $grey-medium;
@@ -14,8 +14,10 @@
 	overflow: hidden;
 
 	@media only screen and (max-width: $bp-tablet) {
+		width: 95%;
 		height: 111px;
 		justify-content: left;
+		border-radius: $radius-medium;
 	}
 
 	&__slogan {
