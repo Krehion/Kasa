@@ -1,19 +1,44 @@
+@import "../base/_variables.scss";
+
 .header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	height: 68px;
 	max-width: 95%;
 	width: 100%;
 	margin: 25px auto 0 auto;
+
+	@media only screen and (max-width: $bp-tablet) {
+		margin: 16px auto 0 auto;
+	}
+
+	img {
+		height: 68px;
+
+		@media only screen and (max-width: $bp-tablet) {
+			height: 47px;
+		}
+	}
 
 	nav {
 		.nav-list {
 			display: flex;
 
-			&__item {
+			@media only screen and (max-width: $bp-tablet) {
+				text-transform: uppercase;
+			}
+
+			a {
 				color: black;
+			}
+
+			&__item {
 				margin-left: 60px;
+
+				@media only screen and (max-width: $bp-tablet) {
+					margin-left: 26px;
+				}
+
 				&--active {
 					text-decoration: underline;
 				}
