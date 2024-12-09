@@ -7,7 +7,7 @@ export default function Home() {
 	return (
 		<div className="home">
 			<Header />
-			{/* <Banner /> */}
+			<Banner />
 			{/* <Slideshow /> */}
 			{/* <Footer /> */}
 		</div>

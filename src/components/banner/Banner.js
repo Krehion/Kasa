@@ -1,22 +1,28 @@
 import "../../style/components/_banner.scss";
-import { useLocation } from "react-router-dom";
-import { useEffect, useState } from "react";
+import BannerHome from "../../assets/home-cover.jpg";
+import BannerAbout from "../../assets/about-cover.jpg";
 
-export default function Banner() {
-	const [aboutPage, setAboutPage] = useState(false);
+function Banner() {
+	const currentRoute = window.location.pathname;
 
-	const location = useLocation();
-
-	useEffect(() => {
-		if (location.pathname === "/about") {
-			setAboutPage(true);
+	const banners = {
+		"/": {
+			image: BannerHome,
+			slogan: "Chez vous, partout et ailleurs"
+		},
+		"/about": {
+			image: BannerAbout,
+			slogan: null // No slogan on this page
 		}
-		// eslint-disable-next-line
-	}, []);
+	};
 
 	return (
-		<section className={aboutPage ? "banner_about" : "banner"}>
-			{!aboutPage && <h2>Chez vous, partout et ailleurs</h2>}
+		<section className="banner">
+			{banners[currentRoute]?.image && <img src={banners[currentRoute].image} alt="" className="banner__bkgd" />}
+			<div className="banner__overlay"></div>
+			{banners[currentRoute]?.slogan && <h2 className="banner__slogan">{banners[currentRoute].slogan}</h2>}
 		</section>
 	);
 }
+
+export default Banner;
