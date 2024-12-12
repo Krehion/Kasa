@@ -1,0 +1,32 @@
+@import "../base/_variables.scss";
+
+.error {
+	main {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		max-width: 1240px;
+		width: 95%;
+		margin: auto;
+	}
+
+	&__number {
+		color: $color-primary;
+		font-weight: $font-weight-bold;
+		font-size: 288px;
+		margin: 80px auto;
+	}
+
+	&__description {
+		color: $color-primary;
+		font-size: 36px;
+	}
+
+	&__link {
+		color: black;
+		text-decoration: underline;
+		font-size: 18px;
+		margin: 130px auto 100px auto;
+	}
+}
