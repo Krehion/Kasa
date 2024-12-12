@@ -1,0 +1,35 @@
+@import "../base/_variables.scss";
+
+.slideshow {
+	position: relative;
+	max-width: 1240px;
+	width: 95%;
+	margin: auto;
+	height: 415px;
+	border-radius: $radius-big;
+	background-position: center;
+
+	&__arrow {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		cursor: pointer;
+
+		&--left {
+			left: 25px;
+		}
+
+		&--right {
+			right: 25px;
+		}
+	}
+
+	&__counter {
+		position: absolute;
+		bottom: 20px;
+		left: 50%;
+		transform: translateX(-50%);
+		color: white;
+		font-size: 18px;
+	}
+}
