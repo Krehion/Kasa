@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function NotFound() {
 	return (
-		<div className="error">
+		<div className="error global-container">
 			<Header />
 			<main>
 				<p className="error__number">404</p>

@@ -32,7 +32,7 @@ export default function About() {
 	];
 
 	return (
-		<div className="about">
+		<div className="about global-container">
 			<Header />
 			<Banner />
 			<main>
