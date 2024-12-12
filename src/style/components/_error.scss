@@ -9,6 +9,7 @@
 		max-width: 1240px;
 		width: 95%;
 		margin: auto;
+		text-align: center;
 	}
 
 	&__number {
@@ -16,11 +17,19 @@
 		font-weight: $font-weight-bold;
 		font-size: 288px;
 		margin: 80px auto;
+
+		@media only screen and (max-width: $bp-tablet) {
+			font-size: 96px;
+		}
 	}
 
 	&__description {
 		color: $color-primary;
 		font-size: 36px;
+
+		@media only screen and (max-width: $bp-tablet) {
+			font-size: 18px;
+		}
 	}
 
 	&__link {
@@ -28,5 +37,9 @@
 		text-decoration: underline;
 		font-size: 18px;
 		margin: 130px auto 100px auto;
+
+		@media only screen and (max-width: $bp-tablet) {
+			font-size: 14px;
+		}
 	}
 }
