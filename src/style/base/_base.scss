@@ -20,6 +20,10 @@ a {
 main {
 	margin: 50px 0;
 	flex: 1;
+
+	@media only screen and (max-width: $bp-tablet) {
+		margin: 15px 0;
+	}
 }
 
 .global-container {
