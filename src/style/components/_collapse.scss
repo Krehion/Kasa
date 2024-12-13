@@ -27,9 +27,14 @@
 	&__content {
 		padding: 20px;
 		font-size: 18px;
+
 		@media only screen and (max-width: $bp-tablet) {
 			padding: 15px;
 			font-size: 12px;
+		}
+
+		p {
+			margin-bottom: 3px;
 		}
 
 		&--hidden {
