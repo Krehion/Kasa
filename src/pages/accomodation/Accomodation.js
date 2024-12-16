@@ -1,6 +1,6 @@
 import data from "../../datas/logements.json";
 
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 import Header from "../../components/header/Header";
@@ -17,14 +17,25 @@ export default function Accomodation() {
 	const { id } = useParams();
 	const dataCurrentPage = data.find((data) => data.id === id);
 
+	const navigate = useNavigate();
+
 	const [imageSlider, setImageSlider] = useState([]);
 
+	// Redirect to NotFound if the id doesn't match anything in the data
 	useEffect(() => {
-		if (dataCurrentPage) {
-			setImageSlider(dataCurrentPage.pictures);
+		if (!dataCurrentPage) {
+			navigate("/404", { replace: true });
+		} else {
+			setImageSlider(dataCurrentPage.pictures); // Update images only if data exists
 		}
-	}, [id, dataCurrentPage]);
+	}, [dataCurrentPage, navigate]);
 
+	// Render nothing if redirecting
+	if (!dataCurrentPage) {
+		return null;
+	}
+
+	// Render the valid accomodation details
 	return (
 		<div className="accomodation global-container">
 			<Header />
