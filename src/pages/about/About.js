@@ -37,7 +37,7 @@ export default function About() {
 			<Banner />
 			<main>
 				{aboutDatas.map((data) => {
-					return <Collapse title={data.title} content={data.content} />;
+					return <Collapse key={data.id} title={data.title} content={data.content} />;
 				})}
 			</main>
 			<Footer />
