@@ -35,6 +35,7 @@
 		font-size: 18px;
 		height: auto;
 		visibility: visible;
+		opacity: 1;
 		transform: translateY(0);
 		transition: all 0.3s linear;
 
@@ -44,12 +45,13 @@
 		}
 
 		p {
-			margin: 3px;
+			margin-bottom: 3px;
 		}
 
 		&--hidden {
 			height: 0;
 			visibility: hidden;
+			opacity: 0;
 			transform: translateY(-64px);
 		}
 	}
