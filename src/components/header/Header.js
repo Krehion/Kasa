@@ -7,9 +7,7 @@ function Header() {
 
 	return (
 		<header className="header">
-			<h1>
-				<img src={Logo} alt="Kasa" />
-			</h1>
+			<img src={Logo} alt="Kasa" />
 			<nav>
 				<ul className="nav-list">
 					<li className={currentRoute === "/" ? "nav-list__item--active" : "nav-list__item"}>
