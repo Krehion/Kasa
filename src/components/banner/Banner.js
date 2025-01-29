@@ -1,16 +1,18 @@
+import { useLocation } from "react-router-dom";
 import "../../style/components/_banner.scss";
 import BannerHome from "../../assets/home-cover.jpg";
 import BannerAbout from "../../assets/about-cover.jpg";
 
 function Banner() {
-	const currentRoute = window.location.pathname;
+	const location = useLocation();
+	const currentRoute = location.pathname.replace(/^\/Kasa/, ""); // Remove "/Kasa" in production
 
 	const banners = {
-		"": {
+		"/": {
 			image: BannerHome,
 			slogan: "Chez vous, partout et ailleurs"
 		},
-		"about": {
+		"/about": {
 			image: BannerAbout,
 			slogan: null // No slogan on this page
 		}
