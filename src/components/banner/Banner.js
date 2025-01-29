@@ -5,10 +5,12 @@ import BannerAbout from "../../assets/about-cover.jpg";
 
 function Banner() {
 	const location = useLocation();
-	const currentRoute = location.pathname.replace(/^\/Kasa/, ""); // Remove "/Kasa" in production
+
+	// Remove "/Kasa" only in production (GitHub Pages)
+	const currentRoute = location.pathname.replace(/^\/Kasa/, "").replace(/^\/$/, "");
 
 	const banners = {
-		"/": {
+		"": {
 			image: BannerHome,
 			slogan: "Chez vous, partout et ailleurs"
 		},
