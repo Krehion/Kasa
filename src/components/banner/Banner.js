@@ -6,11 +6,11 @@ function Banner() {
 	const currentRoute = window.location.pathname;
 
 	const banners = {
-		"/": {
+		"": {
 			image: BannerHome,
 			slogan: "Chez vous, partout et ailleurs"
 		},
-		"/about": {
+		"about": {
 			image: BannerAbout,
 			slogan: null // No slogan on this page
 		}
